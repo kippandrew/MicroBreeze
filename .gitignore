@@ -1,0 +1,7 @@
+hardware/*.gpi
+hardware/*.ger
+hardware/*.xln
+hardware/*.dri
+hardware/*.b#*
+hardware/*.s#*
+src/build-*
