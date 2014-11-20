@@ -4322,6 +4322,26 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="22UF-16V-20%-(1210)" prefix="C" uservalue="yes">
+<description>CAP-10381</description>
+<gates>
+<gate name="G$1" symbol="CAP" x="0" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="1210">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-10381"/>
+<attribute name="VALUE" value="22uF" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="lm2941">
@@ -4567,6 +4587,8 @@ SIEMENS TLE4270</description>
 <part name="R7" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="C3" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="0.1uF"/>
 <part name="JP5" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
+<part name="C4" library="SparkFun-Capacitors" deviceset="22UF-16V-20%-(1210)" device="" value="22uF"/>
+<part name="C8" library="SparkFun-Capacitors" deviceset="22UF-16V-20%-(1210)" device="" value="22uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -4603,9 +4625,9 @@ SIEMENS TLE4270</description>
 <instance part="IC5" gate="G$1" x="-88.9" y="-20.32"/>
 <instance part="GND10" gate="1" x="-119.38" y="-60.96" rot="MR0"/>
 <instance part="USB" gate="G$1" x="-116.84" y="-101.6" rot="MR0"/>
-<instance part="JP3" gate="G$1" x="116.84" y="-63.5" rot="R180"/>
-<instance part="JP2" gate="G$1" x="116.84" y="-17.78" rot="R180"/>
-<instance part="JP1" gate="G$1" x="116.84" y="-2.54" rot="R180"/>
+<instance part="JP3" gate="G$1" x="144.78" y="-63.5" rot="R180"/>
+<instance part="JP2" gate="G$1" x="144.78" y="-17.78" rot="R180"/>
+<instance part="JP1" gate="G$1" x="144.78" y="-2.54" rot="R180"/>
 <instance part="R5" gate="G$1" x="25.4" y="-99.06" rot="R180"/>
 <instance part="R4" gate="G$1" x="-22.86" y="-81.28" rot="R180"/>
 <instance part="C2" gate="G$1" x="-2.54" y="-91.44"/>
@@ -4618,23 +4640,25 @@ SIEMENS TLE4270</description>
 <instance part="R14" gate="G$1" x="-73.66" y="-93.98"/>
 <instance part="R15" gate="G$1" x="-63.5" y="-96.52"/>
 <instance part="GND1" gate="1" x="-22.86" y="0" rot="MR0"/>
-<instance part="R9" gate="G$1" x="93.98" y="10.16" rot="R270"/>
-<instance part="P+3" gate="1" x="93.98" y="20.32"/>
-<instance part="R10" gate="G$1" x="101.6" y="10.16" rot="R270"/>
-<instance part="P+5" gate="1" x="101.6" y="20.32"/>
-<instance part="R11" gate="G$1" x="93.98" y="-50.8" rot="R270"/>
-<instance part="P+7" gate="1" x="93.98" y="-40.64"/>
+<instance part="R9" gate="G$1" x="121.92" y="10.16" rot="R270"/>
+<instance part="P+3" gate="1" x="121.92" y="20.32"/>
+<instance part="R10" gate="G$1" x="129.54" y="10.16" rot="R270"/>
+<instance part="P+5" gate="1" x="129.54" y="20.32"/>
+<instance part="R11" gate="G$1" x="121.92" y="-50.8" rot="R270"/>
+<instance part="P+7" gate="1" x="121.92" y="-40.64"/>
 <instance part="IC1" gate="A" x="25.4" y="-20.32"/>
 <instance part="IC1" gate="B" x="25.4" y="-83.82"/>
 <instance part="IC3" gate="G$1" x="53.34" y="-10.16"/>
 <instance part="IC4" gate="G$1" x="53.34" y="-73.66"/>
 <instance part="GND2" gate="1" x="-7.62" y="-111.76"/>
-<instance part="JP4" gate="G$1" x="116.84" y="-78.74" rot="R180"/>
-<instance part="R12" gate="G$1" x="101.6" y="-50.8" rot="R270"/>
-<instance part="P+9" gate="1" x="101.6" y="-40.64"/>
+<instance part="JP4" gate="G$1" x="144.78" y="-78.74" rot="R180"/>
+<instance part="R12" gate="G$1" x="129.54" y="-50.8" rot="R270"/>
+<instance part="P+9" gate="1" x="129.54" y="-40.64"/>
 <instance part="R7" gate="G$1" x="-127" y="25.4" rot="R270"/>
 <instance part="C3" gate="G$1" x="-58.42" y="55.88" rot="MR270"/>
 <instance part="JP5" gate="G$1" x="-73.66" y="-71.12"/>
+<instance part="C4" gate="G$1" x="83.82" y="-15.24"/>
+<instance part="C8" gate="G$1" x="83.82" y="-78.74"/>
 </instances>
 <busses>
 </busses>
@@ -4715,8 +4739,8 @@ SIEMENS TLE4270</description>
 <wire x1="-7.62" y1="-43.18" x2="-7.62" y2="-60.96" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="G$1" pin="1"/>
 <wire x1="-7.62" y1="-60.96" x2="-7.62" y2="-99.06" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="0" x2="78.74" y2="0" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="0" x2="-7.62" y2="0" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="0" x2="106.68" y2="0" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="0" x2="-7.62" y2="0" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="0" x2="-7.62" y2="-35.56" width="0.1524" layer="91"/>
 <junction x="-7.62" y="-35.56"/>
 <pinref part="C1" gate="G$1" pin="2"/>
@@ -4732,10 +4756,10 @@ SIEMENS TLE4270</description>
 <junction x="-7.62" y="-43.18"/>
 <pinref part="IC3" gate="G$1" pin="GND"/>
 <pinref part="JP3" gate="G$1" pin="1"/>
-<wire x1="109.22" y1="-60.96" x2="76.2" y2="-60.96" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="-60.96" x2="104.14" y2="-60.96" width="0.1524" layer="91"/>
 <junction x="-7.62" y="-60.96"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="76.2" y1="-60.96" x2="-7.62" y2="-60.96" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="-60.96" x2="-7.62" y2="-60.96" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="-109.22" x2="-7.62" y2="-106.68" width="0.1524" layer="91"/>
 <junction x="-7.62" y="-99.06"/>
 <pinref part="IC4" gate="G$1" pin="GND"/>
@@ -4745,13 +4769,13 @@ SIEMENS TLE4270</description>
 <wire x1="-7.62" y1="-106.68" x2="53.34" y2="-106.68" width="0.1524" layer="91"/>
 <junction x="-7.62" y="-106.68"/>
 <pinref part="JP2" gate="G$1" pin="1"/>
-<wire x1="109.22" y1="-15.24" x2="78.74" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="78.74" y1="-15.24" x2="78.74" y2="0" width="0.1524" layer="91"/>
-<junction x="78.74" y="0"/>
+<wire x1="137.16" y1="-15.24" x2="106.68" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="-15.24" x2="106.68" y2="0" width="0.1524" layer="91"/>
+<junction x="106.68" y="0"/>
 <pinref part="JP4" gate="G$1" pin="1"/>
-<wire x1="109.22" y1="-76.2" x2="76.2" y2="-76.2" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="-76.2" x2="76.2" y2="-60.96" width="0.1524" layer="91"/>
-<junction x="76.2" y="-60.96"/>
+<wire x1="137.16" y1="-76.2" x2="104.14" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="-76.2" x2="104.14" y2="-60.96" width="0.1524" layer="91"/>
+<junction x="104.14" y="-60.96"/>
 <pinref part="IC1" gate="A" pin="V-"/>
 <wire x1="25.4" y1="-27.94" x2="25.4" y2="-30.48" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="-30.48" x2="53.34" y2="-30.48" width="0.1524" layer="91"/>
@@ -4766,6 +4790,14 @@ SIEMENS TLE4270</description>
 <wire x1="68.58" y1="-10.16" x2="68.58" y2="-20.32" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="-20.32" x2="53.34" y2="-20.32" width="0.1524" layer="91"/>
 <junction x="53.34" y="-20.32"/>
+<pinref part="C8" gate="G$1" pin="2"/>
+<wire x1="83.82" y1="-81.28" x2="83.82" y2="-106.68" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="-106.68" x2="53.34" y2="-106.68" width="0.1524" layer="91"/>
+<junction x="53.34" y="-106.68"/>
+<pinref part="C4" gate="G$1" pin="2"/>
+<wire x1="83.82" y1="-17.78" x2="83.82" y2="-43.18" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="-43.18" x2="53.34" y2="-43.18" width="0.1524" layer="91"/>
+<junction x="53.34" y="-43.18"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -4840,21 +4872,21 @@ SIEMENS TLE4270</description>
 <segment>
 <pinref part="R9" gate="G$1" pin="1"/>
 <pinref part="P+3" gate="1" pin="+5V"/>
-<wire x1="93.98" y1="15.24" x2="93.98" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="15.24" x2="121.92" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R10" gate="G$1" pin="1"/>
 <pinref part="P+5" gate="1" pin="+5V"/>
-<wire x1="101.6" y1="15.24" x2="101.6" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="15.24" x2="129.54" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R11" gate="G$1" pin="1"/>
 <pinref part="P+7" gate="1" pin="+5V"/>
-<wire x1="93.98" y1="-45.72" x2="93.98" y2="-43.18" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="-45.72" x2="121.92" y2="-43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R12" gate="G$1" pin="1"/>
-<wire x1="101.6" y1="-45.72" x2="101.6" y2="-43.18" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="-45.72" x2="129.54" y2="-43.18" width="0.1524" layer="91"/>
 <pinref part="P+9" gate="1" pin="+5V"/>
 </segment>
 </net>
@@ -5003,12 +5035,12 @@ SIEMENS TLE4270</description>
 <net name="SENSE2" class="0">
 <segment>
 <pinref part="JP2" gate="G$1" pin="3"/>
-<wire x1="109.22" y1="-20.32" x2="101.6" y2="-20.32" width="0.1524" layer="91"/>
-<label x="88.9" y="-20.32" size="1.016" layer="95" rot="R180" xref="yes"/>
+<wire x1="137.16" y1="-20.32" x2="129.54" y2="-20.32" width="0.1524" layer="91"/>
+<label x="116.84" y="-20.32" size="1.016" layer="95" rot="R180" xref="yes"/>
 <pinref part="R10" gate="G$1" pin="2"/>
-<wire x1="101.6" y1="-20.32" x2="88.9" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="-20.32" x2="101.6" y2="5.08" width="0.1524" layer="91"/>
-<junction x="101.6" y="-20.32"/>
+<wire x1="129.54" y1="-20.32" x2="116.84" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="-20.32" x2="129.54" y2="5.08" width="0.1524" layer="91"/>
+<junction x="129.54" y="-20.32"/>
 </segment>
 <segment>
 <pinref part="IC5" gate="G$1" pin="PC3(ADC3)"/>
@@ -5019,38 +5051,46 @@ SIEMENS TLE4270</description>
 <net name="N$8" class="0">
 <segment>
 <pinref part="JP2" gate="G$1" pin="2"/>
-<wire x1="76.2" y1="-17.78" x2="109.22" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="-17.78" x2="137.16" y2="-17.78" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="G$1" pin="2"/>
-<wire x1="76.2" y1="-2.54" x2="109.22" y2="-2.54" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="-2.54" x2="137.16" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="OUT"/>
-<wire x1="76.2" y1="-2.54" x2="76.2" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="-5.08" x2="66.04" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="-17.78" x2="76.2" y2="-5.08" width="0.1524" layer="91"/>
-<junction x="76.2" y="-5.08"/>
+<wire x1="104.14" y1="-2.54" x2="104.14" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="-5.08" x2="83.82" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="-5.08" x2="66.04" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="-17.78" x2="104.14" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="104.14" y="-5.08"/>
+<pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="83.82" y1="-10.16" x2="83.82" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="83.82" y="-5.08"/>
 </segment>
 </net>
 <net name="N$13" class="0">
 <segment>
-<wire x1="73.66" y1="-68.58" x2="73.66" y2="-63.5" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="-68.58" x2="101.6" y2="-63.5" width="0.1524" layer="91"/>
 <pinref part="JP3" gate="G$1" pin="2"/>
-<wire x1="73.66" y1="-63.5" x2="109.22" y2="-63.5" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="-63.5" x2="137.16" y2="-63.5" width="0.1524" layer="91"/>
 <pinref part="IC4" gate="G$1" pin="OUT"/>
-<wire x1="73.66" y1="-68.58" x2="66.04" y2="-68.58" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="-68.58" x2="83.82" y2="-68.58" width="0.1524" layer="91"/>
 <pinref part="JP4" gate="G$1" pin="2"/>
-<wire x1="109.22" y1="-78.74" x2="73.66" y2="-78.74" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="-78.74" x2="73.66" y2="-68.58" width="0.1524" layer="91"/>
-<junction x="73.66" y="-68.58"/>
+<wire x1="83.82" y1="-68.58" x2="66.04" y2="-68.58" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="-78.74" x2="101.6" y2="-78.74" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="-78.74" x2="101.6" y2="-68.58" width="0.1524" layer="91"/>
+<junction x="101.6" y="-68.58"/>
+<pinref part="C8" gate="G$1" pin="1"/>
+<wire x1="83.82" y1="-68.58" x2="83.82" y2="-73.66" width="0.1524" layer="91"/>
+<junction x="83.82" y="-68.58"/>
 </segment>
 </net>
 <net name="SENSE4" class="0">
 <segment>
 <pinref part="JP4" gate="G$1" pin="3"/>
-<wire x1="109.22" y1="-81.28" x2="101.6" y2="-81.28" width="0.1524" layer="91"/>
-<label x="86.36" y="-81.28" size="1.016" layer="95" rot="R180" xref="yes"/>
+<wire x1="137.16" y1="-81.28" x2="129.54" y2="-81.28" width="0.1524" layer="91"/>
+<label x="114.3" y="-81.28" size="1.016" layer="95" rot="R180" xref="yes"/>
 <pinref part="R12" gate="G$1" pin="2"/>
-<wire x1="101.6" y1="-81.28" x2="86.36" y2="-81.28" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="-55.88" x2="101.6" y2="-81.28" width="0.1524" layer="91"/>
-<junction x="101.6" y="-81.28"/>
+<wire x1="129.54" y1="-81.28" x2="114.3" y2="-81.28" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="-55.88" x2="129.54" y2="-81.28" width="0.1524" layer="91"/>
+<junction x="129.54" y="-81.28"/>
 </segment>
 <segment>
 <pinref part="IC5" gate="G$1" pin="PB2(SS/OC1B)"/>
@@ -5061,12 +5101,12 @@ SIEMENS TLE4270</description>
 <net name="SENSE3" class="0">
 <segment>
 <pinref part="JP3" gate="G$1" pin="3"/>
-<wire x1="109.22" y1="-66.04" x2="93.98" y2="-66.04" width="0.1524" layer="91"/>
-<label x="86.36" y="-66.04" size="1.016" layer="95" rot="R180" xref="yes"/>
+<wire x1="137.16" y1="-66.04" x2="121.92" y2="-66.04" width="0.1524" layer="91"/>
+<label x="114.3" y="-66.04" size="1.016" layer="95" rot="R180" xref="yes"/>
 <pinref part="R11" gate="G$1" pin="2"/>
-<wire x1="93.98" y1="-66.04" x2="86.36" y2="-66.04" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="-66.04" x2="93.98" y2="-55.88" width="0.1524" layer="91"/>
-<junction x="93.98" y="-66.04"/>
+<wire x1="121.92" y1="-66.04" x2="114.3" y2="-66.04" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="-66.04" x2="121.92" y2="-55.88" width="0.1524" layer="91"/>
+<junction x="121.92" y="-66.04"/>
 </segment>
 <segment>
 <pinref part="IC5" gate="G$1" pin="PB1(OC1A)"/>
@@ -5077,12 +5117,12 @@ SIEMENS TLE4270</description>
 <net name="SENSE1" class="0">
 <segment>
 <pinref part="JP1" gate="G$1" pin="3"/>
-<wire x1="109.22" y1="-5.08" x2="93.98" y2="-5.08" width="0.1524" layer="91"/>
-<label x="88.9" y="-5.08" size="1.016" layer="95" rot="R180" xref="yes"/>
+<wire x1="137.16" y1="-5.08" x2="121.92" y2="-5.08" width="0.1524" layer="91"/>
+<label x="116.84" y="-5.08" size="1.016" layer="95" rot="R180" xref="yes"/>
 <pinref part="R9" gate="G$1" pin="2"/>
-<wire x1="93.98" y1="-5.08" x2="88.9" y2="-5.08" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="-5.08" x2="93.98" y2="5.08" width="0.1524" layer="91"/>
-<junction x="93.98" y="-5.08"/>
+<wire x1="121.92" y1="-5.08" x2="116.84" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="-5.08" x2="121.92" y2="5.08" width="0.1524" layer="91"/>
+<junction x="121.92" y="-5.08"/>
 </segment>
 <segment>
 <pinref part="IC5" gate="G$1" pin="PC2(ADC2)"/>
